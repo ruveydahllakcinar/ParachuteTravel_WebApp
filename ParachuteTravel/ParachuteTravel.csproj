@@ -22,14 +22,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Users\Data\" />
-    <Folder Include="Areas\Users\Views\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Users\Data\" />
   </ItemGroup>
 
 </Project>
