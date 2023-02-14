@@ -23,7 +23,7 @@ namespace ParachuteTravel.Controllers
         }
 
         [HttpGet]
-        public IActionResult Register() 
+        public IActionResult Register()
         {
             return View();
         }
@@ -39,9 +39,9 @@ namespace ParachuteTravel.Controllers
                 ImageUrl = "profile.png",
                 PhoneNumber = userRegister.PhoneNumber,
             };
-            if (userRegister.Password== userRegister.ConfirmPassword)
+            if (userRegister.Password == userRegister.ConfirmPassword)
             {
-                var result =await  _userManager.CreateAsync(appUser, userRegister.Password);
+                var result = await _userManager.CreateAsync(appUser, userRegister.Password);
 
                 if (result.Succeeded)
                 {
@@ -60,7 +60,7 @@ namespace ParachuteTravel.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login() 
+        public IActionResult Login()
         {
             return View();
         }
@@ -73,7 +73,7 @@ namespace ParachuteTravel.Controllers
                 var result = await _signInManager.PasswordSignInAsync(userLoginView.Username, userLoginView.Password, false, true);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Profile", new { area ="Users"});
+                    return RedirectToAction("Index", "Profile", new { area = "Users" });
                 }
                 else
                 {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParachuteTravel.Areas.Users.Controllers
 {
-    public class DestinationController : Controller
+    public class ChangePasswordController : Controller
     {
         public IActionResult Index()
         {
