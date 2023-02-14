@@ -1,0 +1,5 @@
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\BusinessLayer\obj\Debug\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache

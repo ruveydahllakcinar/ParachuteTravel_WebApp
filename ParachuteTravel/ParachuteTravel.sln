@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\DataA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\BusinessLayer\BusinessLayer.csproj", "{9E7C2E2B-F5B0-4510-81EE-8120D2E72D8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParachuteTravel_UI", "..\ParachuteTravel_UI\ParachuteTravel_UI.csproj", "{97A735BE-6D38-467F-9FE4-C88034C3C21E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{9E7C2E2B-F5B0-4510-81EE-8120D2E72D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E7C2E2B-F5B0-4510-81EE-8120D2E72D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E7C2E2B-F5B0-4510-81EE-8120D2E72D8E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97A735BE-6D38-467F-9FE4-C88034C3C21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97A735BE-6D38-467F-9FE4-C88034C3C21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97A735BE-6D38-467F-9FE4-C88034C3C21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97A735BE-6D38-467F-9FE4-C88034C3C21E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
