@@ -12,32 +12,45 @@ namespace ParachuteTravel.Areas.Users.Controllers
     [Area("Users")]
     [Route("Users/[controller]/[action]")]
 
-       public class ChangePassword : Controller
+    public class ChangePassword : Controller
+    {
+        private readonly UserManager<AppUser> _userManager;
+
+        public ChangePassword(UserManager<AppUser> userManager)
         {
-            private readonly UserManager<AppUser> _userManager;
+            _userManager = userManager;
+        }
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
 
-            public ChangePassword(UserManager<AppUser> userManager)
+        [HttpPost]
+        public async Task<IActionResult> Index(UserChangePasswordViewModel userChangePasswordView)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, userChangePasswordView.Password);
+            if (userChangePasswordView.Password == userChangePasswordView.ConfirmPassword)
             {
-                _userManager = userManager;
-            }
-            [HttpGet]
-            public IActionResult Index()
-            {
-                return View();
-            }
+                var result = await _userManager.CreateAsync(user, userChangePasswordView.Password);
 
-            [HttpPost]
-            public async Task<IActionResult> Index(UserChangePasswordViewModel userChangePasswordView)
-            {
-                var user = await _userManager.FindByNameAsync(User.Identity.Name);
-                user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, userChangePasswordView.Password);
-                var result = await _userManager.UpdateAsync(user);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Profile");
+                    return RedirectToAction("Login");
                 }
-                return View();
+                else
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
+
             }
+            return View(userChangePasswordView);
+
 
         }
     }
+}
