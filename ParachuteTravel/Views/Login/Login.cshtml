@@ -1,0 +1,62 @@
+﻿@model PoleStar_TraversalCoreProject.Models.UserLoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Parachute Travel Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="~/UserDashboard_Template/assets/img/logo.png" />
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="~/Register_Page/fonts/linearicons/style.css">
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="~/Register_Page/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner">
+            <form action="" method="post">
+                <img src="~/UserDashboard_Template/assets/img/logo.png" class="navbar-brand-img" alt="IMG">
+                <h3>Login</h3>
+                <div class="form-holder">
+                    <span class="lnr lnr-envelope"></span>
+                    <input type="text" asp-for="Username" class="form-control" placeholder="Username">
+                </div>
+                <span asp-validation-for="Username" style="color:#ff0000"></span>
+                <div class="form-holder">
+                    <span class="lnr lnr-lock"></span>
+                    <input type="password" asp-for="Password" class="form-control" placeholder="Password">
+                </div>
+                <div class="text-danger" asp-validation-summary="ModelOnly">
+
+                </div>
+                <div class="text-center p-t-12">
+                    <span>
+                        <a class="txt1" href="#">
+                            Forget Password
+                        </a>
+                    </span>
+
+                </div>
+                <button>
+                    <span>Login</span>
+                </button>
+
+                <div class="text-center txt2">
+                    <a href="/Login/Register/">
+                        Create your Account
+                        <i class="lnr lnr-arrow-right-circle" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="~/Register_Page/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Register_Page/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

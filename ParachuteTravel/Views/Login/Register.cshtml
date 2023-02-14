@@ -1,0 +1,77 @@
+﻿@model PoleStar_TraversalCoreProject.Models.UserRegisterViewModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Parachute Travel Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="~/UserDashboard_Template/assets/img/logo.png" />
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="~/Register_Page/fonts/linearicons/style.css">
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="~/Register_Page/css/style.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner">
+            <form method="post">
+                <img src="~/UserDashboard_Template/assets/img/logo.png" class="navbar-brand-img" alt="IMG">
+                <h3>Register</h3>
+                <div class="form-holder">
+                    <span class="lnr lnr-user"></span>
+                    <input type="text" asp-for="Name" class="form-control" placeholder="Name">
+                </div>
+                <span asp-validation-for="Name" style="color:#ff0000"></span>
+                <div class="form-holder">
+                    <span class="lnr lnr-sun"></span>
+                    <input type="text" asp-for="Surname" class="form-control" placeholder="Surname">
+                </div>
+                <span asp-validation-for="Surname" style="color:#ff0000"></span>
+                <div class="form-holder">
+                    <span class="lnr lnr-diamond"></span>
+                    <input type="text" asp-for="Username" class="form-control" placeholder="Username">
+                    <span asp-validation-for="Username" style="color:#ff0000"></span>
+
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-phone-handset"></span>
+                    <input type="tel" asp-for="PhoneNumber" class="form-control" placeholder="Phone Number">
+                    <span asp-validation-for="PhoneNumber" style="color:#ff0000"></span>
+
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-envelope"></span>
+                    <input type="email" asp-for="Email" class="form-control" placeholder="Mail">
+                    <span asp-validation-for="Email" style="color:#ff0000"></span>
+
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-lock"></span>
+                    <input type="password" asp-for="Password" class="form-control" placeholder="Password">
+                </div>
+                <div style="color:#ff0000" asp-validation-summary="ModelOnly"></div>
+
+                <div class="form-holder">
+                    <span class="lnr lnr-lock"></span>
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password">
+                </div>
+                <span asp-validation-for="ConfirmPassword" style="color:#ff0000"></span>
+
+                <button>
+                    <span>Register</span>
+                </button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="~/Register_Page/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Register_Page/js/main.js"></script>
+</body>
+</html>
