@@ -22,6 +22,7 @@ namespace EntityLayer.Concrete
         public string Details { get; set; }
         public string Details2 { get; set; }
         public string ImageDetail { get; set; }
+        public DateTime ShareDate { get; set; }
         public List<Comment>Comments { get; set; }
         public List<Reservation>Reservations { get; set; }
     }
