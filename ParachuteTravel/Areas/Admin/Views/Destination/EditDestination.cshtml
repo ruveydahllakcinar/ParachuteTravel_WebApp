@@ -1,0 +1,123 @@
+﻿@model EntityLayer.Concrete.Destination
+@{
+    ViewData["Title"] = "EditDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+        <div class="col-xl">
+            <div class="card mb-12">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Edit Destination</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <div class="input-group input-group-merge">     
+                                <input type="hidden" asp-for="DestinationId" class="form-control" placeholder="Please enter city name" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-fullname">City Name</label>
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text">
+                                    <i class="bx bx-building-house"></i>
+                                </span>
+                                <input type="text" asp-for="CityName" class="form-control" placeholder="Please enter city name" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-company">Day/Night</label>
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text">
+                                    <i class="bx bx-sun"></i>
+                                </span>
+                                <input type="text" asp-for="DayNight" class="form-control" placeholder="Day/Night" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-company">Price</label>
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text">
+                                    <i class="bx bx-dollar"></i>
+                                </span>
+                                <input type="number" asp-for="Price" class="form-control" placeholder="Price" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-company">Share Date</label>
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text">
+                                    <i class="bx bx-calendar-alt"></i>
+                                </span>
+                                <input type="date" asp-for="ShareDate" class="form-control" placeholder="Price" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-company">Capacity</label>
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text">
+                                    <i class="bx bxs-user"></i>
+                                </span>
+                                <input type="number" asp-for="Capacity" class="form-control" placeholder="Capacity" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-message">Description</label>
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-message2" class="input-group-text">
+                                    <i class="bx bx-comment"></i>
+                                </span>
+                                <textarea id="basic-icon-default-message" asp-for="Description" class="form-control" placeholder="Do not forget to write a description about the holiday!"></textarea>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-message">Image</label>
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-message2" class="input-group-text">
+                                    <i class="bx bx-photo-album"></i>
+                                </span>
+                                <input id="basic-icon-default-message" asp-for="Image" class="form-control" placeholder="Please enter Image" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-message">Cover Image</label>
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-message2" class="input-group-text">
+                                    <i class="bx bx-photo-album"></i>
+                                </span>
+                                <input id="basic-icon-default-message" asp-for="CoverImage" class="form-control" placeholder="Please enter Image" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-message">Image Detail</label>
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-message2" class="input-group-text">
+                                    <i class="bx bx-photo-album"></i>
+                                </span>
+                                <input id="basic-icon-default-message" asp-for="ImageDetail" class="form-control" placeholder="Please enter Image" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-message">Detail</label>
+                            <div class="input-group input-group-merge">
+                                <textarea id="basic-icon-default-message" rows="5" asp-for="Details" class="form-control" placeholder="Please enter Image"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-message">Detail</label>
+                            <div class="input-group input-group-merge">
+                                <textarea id="basic-icon-default-message" asp-for="Details2" rows="5" class="form-control" placeholder="Do not forget to write a description about the holiday!"></textarea>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary">Create</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

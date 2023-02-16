@@ -196,3 +196,13 @@ C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Users\Views\Shared\Components\ProfileInformations\Default.cshtml.g.cs
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Users\Views\Shared\Components\CurrentTravelList\Default.cshtml.g.cs
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Users\Views\Shared\Components\PlatformSettings\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Destination\Index.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminHeadPartial\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminNavbarPartial\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminSidebarPartial\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminFooterPartial\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminScriptPartial\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Destination\AddDestination.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Destination\EditDestination.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
