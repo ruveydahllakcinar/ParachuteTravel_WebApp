@@ -12,6 +12,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 
 namespace ParachuteTravel
 {
@@ -29,6 +34,9 @@ namespace ParachuteTravel
         {
             services.AddDbContext<Context>();
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
+
+            services.AddScoped<ICommentService, CommentManager>();
+            services.AddScoped<ICommentDal, EfCommentDal>();
             services.AddControllersWithViews();
 
             services.AddMvc(config =>

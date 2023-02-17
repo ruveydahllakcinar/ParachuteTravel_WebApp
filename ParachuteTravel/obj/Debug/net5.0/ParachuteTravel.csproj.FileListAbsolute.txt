@@ -206,3 +206,12 @@ C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Destination\AddDestination.cshtml.g.cs
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Destination\EditDestination.cshtml.g.cs
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminDashboardBanner\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminGuideList\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminCards1Statistic\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminCards2Statistics\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminDestinationStatistic2\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminDestinationStatistic\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_AdminTotalRevenue\Default.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Comment\Index.cshtml.g.cs

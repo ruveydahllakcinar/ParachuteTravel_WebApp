@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en"
+      class="light-style layout-menu-fixed"
+      dir="ltr"
+      data-theme="theme-default"
+      data-assets-path="~/TraversalTheme_Admin/assets/"
+      data-template="vertical-menu-template-free">
+
+@await Component.InvokeAsync("_AdminHeadPartial")
+
+<body>
+    <!-- Layout wrapper -->
+    <div class="row">
+
+        @await Component.InvokeAsync("_AdminDashboardBanner")
+
+        @await Component.InvokeAsync("_AdminCards1Statistic")
+
+        @await Component.InvokeAsync("_AdminTotalRevenue")
+
+        @await Component.InvokeAsync("_AdminCards2Statistics")
+    </div>
+    <div class="row">
+
+        @await Component.InvokeAsync("_AdminDestinationStatistic")
+
+        @await Component.InvokeAsync("_AdminDestinationStatistic2")
+
+        @await Component.InvokeAsync("_AdminGuideList")
+        <!--/ Transactions -->
+    </div>
+    <div class="content-backdrop fade"></div>
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+    @await Component.InvokeAsync("_AdminScriptPartial")
+</body>
+</html>
