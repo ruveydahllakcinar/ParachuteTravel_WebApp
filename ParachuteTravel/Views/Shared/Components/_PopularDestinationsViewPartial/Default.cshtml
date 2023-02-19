@@ -23,7 +23,7 @@
                                         <h6 class=""> Prices starting from </h6>
                                         <span>$@destination.Price</span>
                                     </div>
-                                    <p class="sub-para">@destination.Description</p>
+                                    <p class="sub-para">@destination.Description.ToString().Substring(0, (destination.Description.Length > 50) ? 50 : destination.Description.Length) ...</p>
                                 </div>
                             </div>
                         </a>

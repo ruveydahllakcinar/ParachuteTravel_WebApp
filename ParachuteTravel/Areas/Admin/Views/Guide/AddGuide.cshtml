@@ -1,0 +1,62 @@
+﻿@model ParachuteTravel.Areas.Admin.Models.AddGuideViewModel
+@{
+    ViewData["Title"] = "AddGuide";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add New Guide</h4>
+
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputName1">Name & Surname</label>
+                    <input type="text" asp-for="Name" class="form-control" id="exampleInputName1" placeholder="Name & Surname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Description</label>
+                    <input type="text" asp-for="Description" class="form-control" id="exampleInputName1" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Status</label>
+                    <input type="datetime" asp-for="Status" class="form-control" id="exampleInputName1" placeholder="Status">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Twitter</label>
+                    <input type="url" asp-for="TwitterUrl" class="form-control" id="exampleInputName1" placeholder="Status">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Instagram</label>
+                    <input type="url" asp-for="InstagramUrl" class="form-control" id="exampleInputName1" placeholder="Status">
+                </div>
+                <div class="form-group">
+                    <label asp-for="Image" class="control-label">Choose file</label>
+                    <div class="custom-file">
+                        <input type="file" asp-for="Image" class="form-control" id="customFile" onchange="document.getElementById('PreviewPhoto').src = window.URL.createObjectURL(this)">
+                    </div>
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+                @*<div class="form-group col-4">
+            <img id="PreviewPhoto" src="~/GuideImage/@Model.GuideImageUrl" alt="Logo Image" width="125" height="125" style="border:1px; margin-top:20px;" />
+        </div>*@
+                <div class="btn-sm mt-2">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script type="text/javascript">
+
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}

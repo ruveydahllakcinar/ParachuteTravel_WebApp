@@ -12,6 +12,6 @@ namespace ParachuteTravel.Areas.Users.Models
         public string Password { get; set; }
 
         [Required, DataType(DataType.Password), Display(Name = "Please enter your new password")]
-        public string ConfirmPassword { get; set; }
+        public string NewPassword { get; set; }
     }
 }

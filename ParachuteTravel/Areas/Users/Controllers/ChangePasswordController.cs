@@ -31,24 +31,19 @@ namespace ParachuteTravel.Areas.Users.Controllers
         {
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, userChangePasswordView.Password);
-            if (userChangePasswordView.Password == userChangePasswordView.ConfirmPassword)
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
             {
-                var result = await _userManager.CreateAsync(user, userChangePasswordView.Password);
-
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("Login");
-                }
-                else
-                {
-                    foreach (var item in result.Errors)
-                    {
-                        ModelState.AddModelError("", item.Description);
-                    }
-                }
-
+                return RedirectToAction("Login", "Login");
             }
-            return View(userChangePasswordView);
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
+                }
+            }
+            return View();
 
 
         }

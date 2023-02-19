@@ -77,7 +77,7 @@ namespace ParachuteTravel.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("Login", "Index");
+                    ModelState.AddModelError("", "Wrong username or password");
                 }
             }
             return View();
