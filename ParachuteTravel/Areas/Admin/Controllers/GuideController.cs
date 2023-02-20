@@ -1,5 +1,7 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.ValidationRules;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using ParachuteTravel.Areas.Admin.Models;
 using System;
@@ -21,6 +23,7 @@ namespace ParachuteTravel.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+           
             var guides = _guideService.TGetList();
             return View(guides);
         }
@@ -33,8 +36,10 @@ namespace ParachuteTravel.Areas.Admin.Controllers
         }
         [HttpPost]
         public IActionResult AddGuide(AddGuideViewModel addGuide)
-        {
+        { 
             Guide guide = new Guide();
+          
+         
             if (addGuide.Image != null)
             {
                 var resource = Directory.GetCurrentDirectory();
@@ -51,8 +56,24 @@ namespace ParachuteTravel.Areas.Admin.Controllers
             guide.Status = addGuide.Status;
             guide.InstagramUrl = addGuide.InstagramUrl;
             guide.TwitterUrl = addGuide.TwitterUrl;
-            _guideService.TAdd(guide);
-            return RedirectToAction("Index", "Guide");
+
+            GuideValidator validationRules = new();
+            var validatorResult = validationRules.Validate(guide);
+
+            if (!validatorResult.IsValid)
+            {
+                _guideService.TAdd(guide);
+                return RedirectToAction("Index", "Guide");
+            }   
+            else
+            {
+                foreach (var item in validatorResult.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+                
+            }
+            return View();
 
         }
 

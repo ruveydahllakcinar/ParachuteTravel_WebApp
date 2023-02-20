@@ -13,29 +13,37 @@
                 <div class="form-group">
                     <label for="exampleInputName1">Name & Surname</label>
                     <input type="text" asp-for="Name" class="form-control" id="exampleInputName1" placeholder="Name & Surname">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+
                 </div>
+
                 <div class="form-group">
                     <label for="exampleInputName1">Description</label>
                     <input type="text" asp-for="Description" class="form-control" id="exampleInputName1" placeholder="Description">
+                    <span asp-validation-for="Description" class="text-danger"></span>
+
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword4">Status</label>
                     <input type="datetime" asp-for="Status" class="form-control" id="exampleInputName1" placeholder="Status">
+                    <span asp-validation-for="Status" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword4">Twitter</label>
-                    <input type="url" asp-for="TwitterUrl" class="form-control" id="exampleInputName1" placeholder="Status">
+                    <input type="url" asp-for="TwitterUrl" class="form-control" id="exampleInputName1" placeholder="Twitter">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword4">Instagram</label>
-                    <input type="url" asp-for="InstagramUrl" class="form-control" id="exampleInputName1" placeholder="Status">
+                    <input type="url" asp-for="InstagramUrl" class="form-control" id="exampleInputName1" placeholder="Twitter">
+
                 </div>
                 <div class="form-group">
                     <label asp-for="Image" class="control-label">Choose file</label>
                     <div class="custom-file">
                         <input type="file" asp-for="Image" class="form-control" id="customFile" onchange="document.getElementById('PreviewPhoto').src = window.URL.createObjectURL(this)">
+                        <span asp-validation-for="Image" class="text-danger"></span>
+
                     </div>
-                    <span asp-validation-for="Image" class="text-danger"></span>
                 </div>
                 @*<div class="form-group col-4">
             <img id="PreviewPhoto" src="~/GuideImage/@Model.GuideImageUrl" alt="Logo Image" width="125" height="125" style="border:1px; margin-top:20px;" />
