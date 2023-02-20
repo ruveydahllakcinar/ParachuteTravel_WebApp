@@ -35,11 +35,11 @@
                     @{
                         if (guide.Status == true)
                         {
-                            <td><a href="#" class="btn btn-outline-secondary">Passive</a></td>
+                            <td><a href="/Admin/Guide/ChangeToFalse/@guide.GuideId" class="btn btn-outline-secondary">Passive</a></td>
                         }
                         else
                         {
-                            <td><a href="#" class="btn btn-outline-success">Active</a></td>
+                            <td><a href="/Admin/Guide/ChangeToTrue/@guide.GuideId" class="btn btn-outline-success">Active</a></td>
                         }
 
                     }

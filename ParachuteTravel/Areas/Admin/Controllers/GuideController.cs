@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 namespace ParachuteTravel.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Route("Admin/[controller]/[action]/{id?}")]
     public class GuideController : Controller
     {
         private readonly IGuideService _guideService;
@@ -38,32 +39,30 @@ namespace ParachuteTravel.Areas.Admin.Controllers
         public IActionResult AddGuide(AddGuideViewModel addGuide)
         { 
             Guide guide = new Guide();
-          
-         
-            if (addGuide.Image != null)
-            {
-                var resource = Directory.GetCurrentDirectory();
-                var extension = Path.GetExtension(addGuide.Image.FileName);
-                var imagename = Guid.NewGuid() + extension;
-                var savelocation = resource + "/wwwroot/GuideImage/" + imagename;
-                var stream = new FileStream(savelocation, FileMode.Create);
-                addGuide.Image.CopyToAsync(stream);
-                guide.Image = imagename;
-            }
-
-            guide.Name = addGuide.Name;
-            guide.Description = addGuide.Description;
-            guide.Status = addGuide.Status;
-            guide.InstagramUrl = addGuide.InstagramUrl;
-            guide.TwitterUrl = addGuide.TwitterUrl;
-
             GuideValidator validationRules = new();
             var validatorResult = validationRules.Validate(guide);
 
             if (!validatorResult.IsValid)
             {
+                if (addGuide.Image != null)
+                {
+                    var resource = Directory.GetCurrentDirectory();
+                    var extension = Path.GetExtension(addGuide.Image.FileName);
+                    var imagename = Guid.NewGuid() + extension;
+                    var savelocation = resource + "/wwwroot/GuideImage/" + imagename;
+                    var stream = new FileStream(savelocation, FileMode.Create);
+                    addGuide.Image.CopyToAsync(stream);
+                    guide.Image = imagename;
+                }
+
+                guide.Name = addGuide.Name;
+                guide.Description = addGuide.Description;
+                guide.Status = addGuide.Status;
+                guide.InstagramUrl = addGuide.InstagramUrl;
+                guide.TwitterUrl = addGuide.TwitterUrl;
+         
                 _guideService.TAdd(guide);
-                return RedirectToAction("Index", "Guide");
+                return RedirectToAction("Index", "Guide", new { area = "Admin" });
             }   
             else
             {
@@ -106,15 +105,17 @@ namespace ParachuteTravel.Areas.Admin.Controllers
             return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
 
-        public IActionResult ChangeTrue(int id)
+        public IActionResult ChangeToTrue(int id)
         {
-            return RedirectToAction("Index", "Guide");
+            _guideService.TChangeToTrueByGuide(id);
+            return RedirectToAction("Index","Guide", new { area = "Admin" });
         }
 
 
-        public IActionResult ChangeFalse(int id)
+        public IActionResult ChangeToFalse(int id)
         {
-            return RedirectToAction("Index", "Guide");
+            _guideService.TChangeToFalseByGuide(id);
+            return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
     }
 }

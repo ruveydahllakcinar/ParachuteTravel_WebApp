@@ -250,3 +250,10 @@ C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\runtimes\win-x86\native\libSkiaSharp.dll
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\PDFReport\Index.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\MailKit.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\System.Formats.Asn1.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Mail\SendMessage.cshtml.g.cs
