@@ -1,5 +1,7 @@
 ﻿using BusinessLayer.Abstract;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using ParachuteTravel.Areas.Admin.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +21,17 @@ namespace ParachuteTravel.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            var values = _announcementService.TGetList();
-            return View(values);
+            List<Announcement> announcements = _announcementService.TGetList();
+            List<AnnouncementViewModel> models = new();
+            foreach (var announcement in announcements)
+            {
+                AnnouncementViewModel announcementViewModel = new();
+                announcementViewModel.AnnouncementId = announcement.AnnouncementID;
+                announcementViewModel.Title = announcement.Title;
+                announcementViewModel.Content = announcement.Content;
+                models.Add(announcementViewModel);
+            }
+            return View(models);
         }
 
         [HttpGet]

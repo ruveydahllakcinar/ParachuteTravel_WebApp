@@ -1,0 +1,41 @@
+﻿@model List<ParachuteTravel.Areas.Admin.Models.AnnouncementViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="card">
+    <h5 class="card-header">Guide List</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var announcement in Model)
+                {
+                    count++;
+                <tr>
+                    <td>@count</td>
+                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@announcement.Title</strong></td>
+                    <td>@announcement.Content</td>
+                    <td><a href="#" class="btn btn-outline-dark">Details</a></td>
+                </tr>
+
+                }
+
+            </tbody>
+
+        </table>
+      
+    </div>
+
+</div>
+
+

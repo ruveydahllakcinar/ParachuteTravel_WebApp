@@ -12,6 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using ParachuteTravel.Models;
+using FluentValidation;
+using DTOLayer.DTOs.AnnouncementDTOs;
+using BusinessLayer.ValidationRules;
 
 namespace ParachuteTravel
 {
@@ -38,6 +41,10 @@ namespace ParachuteTravel
                 x.SetMinimumLevel(LogLevel.Debug);
                 x.AddDebug();
             });
+
+            services.AddAutoMapper(typeof(Startup));
+            services.AddTransient<IValidator<AnnouncementAddDTO>, AnnouncementValidator>();
+            services.AddControllersWithViews().AddFluentValidation();
             services.AddControllersWithViews();
 
             services.AddMvc(config =>

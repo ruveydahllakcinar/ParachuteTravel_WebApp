@@ -264,3 +264,8 @@ C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\DTOLayer.dll
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\DTOLayer.pdb
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\ContactUs\Index.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\Announcement\Index.cshtml.g.cs
