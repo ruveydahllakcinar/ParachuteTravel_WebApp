@@ -18,7 +18,9 @@ namespace DataAccessLayer.Concrete
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<AboutHeader> AboutHeaders { get; set; }
+        public DbSet<Announcement> Announcements { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ContactUs> ContactsUses { get; set; }
         public DbSet<Destination> Destinations { get; set; }
         public DbSet<FeatureLargeCard> FeatureLargeCards { get; set; }
         public DbSet<Guide> Guides { get; set; }

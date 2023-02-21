@@ -1495,3 +1495,6 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2023-02-20T17:15:38.4764023+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
 2023-02-20T17:15:38.4864265+03:00  [INF] Hosting environment: "Development" (c3307c92)
 2023-02-20T17:15:38.4865163+03:00  [INF] Content root path: "C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel" (b5d60022)
+2023-02-20T21:38:24.3930121+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2023-02-20T21:38:24.4262546+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2023-02-20T21:38:24.4265727+03:00  [INF] Content root path: "C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel" (b5d60022)

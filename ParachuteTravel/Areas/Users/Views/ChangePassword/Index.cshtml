@@ -16,14 +16,15 @@
                 <div class="form-group">
                     <label for="exampleInputName1">New Password</label>
                     <input type="password" asp-for="Password" class="form-control" id="exampleInputName1" placeholder="New Password">
+                    <span asp-validation-for="Password"></span>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Confirm Password</label>
                     <input type="password" asp-for="NewPassword" class="form-control" id="exampleInputName1" placeholder="Confirm Password">
+                    <span asp-validation-for="NewPassword"></span>
+                </div>
+                <div class="text-danger" asp-validation-summary="ModelOnly">
 
-                    <div class="text-danger" asp-validation-summary="ModelOnly">
-
-                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary mr-2">Change Password</button>
 
