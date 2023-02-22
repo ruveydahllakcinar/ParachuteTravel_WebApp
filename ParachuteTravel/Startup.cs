@@ -10,11 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System.IO;
 using ParachuteTravel.Models;
-using FluentValidation;
-using DTOLayer.DTOs.AnnouncementDTOs;
-using BusinessLayer.ValidationRules;
+using System.IO;
 
 namespace ParachuteTravel
 {
@@ -33,6 +30,7 @@ namespace ParachuteTravel
 
             services.AddDbContext<Context>();
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddEntityFrameworkStores<Context>();
+            services.AddHttpClient();
             services.ContainerDependencies();
 
             services.AddLogging(x =>
@@ -43,9 +41,8 @@ namespace ParachuteTravel
             });
 
             services.AddAutoMapper(typeof(Startup));
-            services.AddTransient<IValidator<AnnouncementAddDTO>, AnnouncementValidator>();
+            services.CustomValidator();
             services.AddControllersWithViews().AddFluentValidation();
-            services.AddControllersWithViews();
 
             services.AddMvc(config =>
             {

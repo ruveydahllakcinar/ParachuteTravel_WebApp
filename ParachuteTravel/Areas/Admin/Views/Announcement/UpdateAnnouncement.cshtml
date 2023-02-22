@@ -1,0 +1,44 @@
+﻿@model AnnouncementUpdateDto
+@{
+    ViewData["Title"] = "UpdateAnnouncement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+        <div class="col-xl">
+            <div class="card mb-12">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Sender Mail</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <input type="hidden" asp-for="AnnouncementId"/>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-fullname">Announcement Title</label>
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text">
+                                    <i class="bx bx-text"></i>
+                                </span>
+                                <input type="text" asp-for="Title" class="form-control" />
+                            </div>
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-icon-default-fullname">Announcement Content</label>
+                            <div class="input-group input-group-merge">
+                                <textarea type="text" asp-for="Content" class="form-control" rows="5"></textarea>
+                            </div>
+                            <span asp-validation-for="Content" class="text-danger"></span>
+                        </div>
+                        <button class="btn btn-outline-primary" onclick="alert('Announcement has been updated')">Update Announcement</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

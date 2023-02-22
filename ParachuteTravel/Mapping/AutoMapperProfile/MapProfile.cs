@@ -14,14 +14,20 @@ namespace ParachuteTravel.Mapping.AutoMapperProfile
     {
         public MapProfile()
         {
-            CreateMap<AnnouncementAddDTO, Announcement>();
-            CreateMap<Announcement, AnnouncementAddDTO>();
+            CreateMap<AnnouncementAddDto, Announcement>();
+            CreateMap<Announcement, AnnouncementAddDto>();
 
             CreateMap<UserLoginDTO, AppUser>();
             CreateMap<AppUser, UserLoginDTO>();
 
             CreateMap<UserRegisterDTO, AppUser>();
             CreateMap<AppUser, UserRegisterDTO>();
+
+            CreateMap<AnnouncementListDto, Announcement>();
+            CreateMap<Announcement, AnnouncementListDto>();
+
+            CreateMap<AnnouncementUpdateDto, Announcement>();
+            CreateMap<Announcement, AnnouncementUpdateDto>();
         }
     }
 }

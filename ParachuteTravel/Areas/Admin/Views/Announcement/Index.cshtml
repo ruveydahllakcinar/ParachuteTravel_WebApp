@@ -1,4 +1,4 @@
-﻿@model List<ParachuteTravel.Areas.Admin.Models.AnnouncementViewModel>
+﻿@model List<DTOLayer.DTOs.AnnouncementDTOs.AnnouncementListDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -15,25 +15,41 @@
                     <th>Title</th>
                     <th>Content</th>
                     <th>Details</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody class="table-border-bottom-0">
                 @foreach (var announcement in Model)
                 {
                     count++;
-                <tr>
-                    <td>@count</td>
-                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@announcement.Title</strong></td>
-                    <td>@announcement.Content</td>
-                    <td><a href="#" class="btn btn-outline-dark">Details</a></td>
-                </tr>
+                    <tr>
+                        <td>@count</td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@announcement.Title</strong></td>
+                        <td>@announcement.Content.ToString().Substring(0, (announcement.Content.Length > 50) ? 50 : announcement.Content.Length) ...</td>
+                        <td><a href="#" class="btn btn-outline-dark">Details</a></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/Admin/Announcement/UpdateAnnouncement/@announcement.AnnouncementId"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                    <a class="dropdown-item" href="/Admin/Announcement/DeleteAnnouncement/@announcement.AnnouncementId"><i class="bx bx-trash me-1"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
 
                 }
 
             </tbody>
 
         </table>
-      
+        <div class="btn-sm mt-2 pl-3 mb-2">
+            <a href="/Admin/Announcement/AddAnnouncement/" class="btn btn-outline-primary">Add Announcement</a>
+        </div>
+
     </div>
 
 </div>
