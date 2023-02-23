@@ -275,3 +275,7 @@ C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\VisitorApi\EditVisitor.cshtml.g.cs
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\VisitorApi\AddVisitor.cshtml.g.cs
 C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\ApiMovie\Index.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\BookingExchange\Index.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\BookingHotelSearch\Index.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\BookingHotelSearch\GetCityDestId.cshtml.g.cs
+C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\obj\Debug\net5.0\Razor\Areas\Admin\Views\DestinationCQRS\Index.cshtml.g.cs

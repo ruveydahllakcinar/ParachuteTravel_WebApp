@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using ParachuteTravel.Areas.Admin.Models;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace ParachuteTravel.Areas.Admin.Controllers
     {
         public async Task<IActionResult> Index()
         {
-			List<BookingExchangeViewModel> bookingExchangeViewModels = new();
+			List<BookingExchangeViewModel2> bookingExchangeViewModels = new List<BookingExchangeViewModel2>();
 			var client = new HttpClient();
 			var request = new HttpRequestMessage
 			{
@@ -25,12 +26,14 @@ namespace ParachuteTravel.Areas.Admin.Controllers
 		{ "X-RapidAPI-Host", "booking-com.p.rapidapi.com" },
 	},
 			};
-			using (var response = await client.SendAsync(request))
+			using(var response = await client.SendAsync(request))
 			{
 				response.EnsureSuccessStatusCode();
 				var body = await response.Content.ReadAsStringAsync();
+				var values = JsonConvert.DeserializeObject<BookingExchangeViewModel2>(body);
+				return View(values.exchange_rates);
 			}
-			return View();
+			
         }
     }
 }

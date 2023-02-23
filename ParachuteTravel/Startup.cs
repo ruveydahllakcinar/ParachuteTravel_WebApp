@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ParachuteTravel.CQRS.Handlers.DestinationHandlers;
 using ParachuteTravel.Models;
 using System.IO;
 
@@ -32,7 +33,7 @@ namespace ParachuteTravel
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddEntityFrameworkStores<Context>();
             services.AddHttpClient();
             services.ContainerDependencies();
-
+            services.AddScoped<GetAllDestinationQueryHandlers>();
             services.AddLogging(x =>
             {
                 x.ClearProviders();
