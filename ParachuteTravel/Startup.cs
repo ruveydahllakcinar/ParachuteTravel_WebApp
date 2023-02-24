@@ -33,7 +33,11 @@ namespace ParachuteTravel
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddEntityFrameworkStores<Context>();
             services.AddHttpClient();
             services.ContainerDependencies();
-            services.AddScoped<GetAllDestinationQueryHandlers>();
+            services.AddScoped<GetAllDestinationQueryHandler>();
+            services.AddScoped<GetDestinationByIDQueryHandler>();
+            services.AddScoped<CreateDestinationCommandHandler>();
+            services.AddScoped<RemoveDestinationCommandHandler>();
+            services.AddScoped<UpdateDestinationCommandHandler>();
             services.AddLogging(x =>
             {
                 x.ClearProviders();

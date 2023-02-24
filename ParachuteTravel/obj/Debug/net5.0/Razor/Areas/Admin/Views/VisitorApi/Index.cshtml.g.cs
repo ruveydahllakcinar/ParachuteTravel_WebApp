@@ -49,13 +49,20 @@ using ParachuteTravel.CQRS.Results.DestinationResults;
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\Areas\Admin\Views\_ViewImports.cshtml"
+using ParachuteTravel.CQRS.Commands.DestinationCommands;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\Areas\Admin\Views\_ViewImports.cshtml"
 using ParachuteTravel;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3a5a1c2795d9619e0bab5c7cbee75fb94c5e3afd", @"/Areas/Admin/Views/VisitorApi/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a73194c6227d3f14d00ae1305048726f898cadaf", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"22faac07af0a76d76fa84614ac41b2f759b384de", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_VisitorApi_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<VisitorViewModel>>
     {
         #pragma warning disable 1998

@@ -1,6 +1,6 @@
-﻿@model GetDestinationByIDQueryResult
+﻿@model CreateDestinationCommands
 @{
-    ViewData["Title"] = "GetDestination";
+    ViewData["Title"] = "AddDestination";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -9,22 +9,17 @@
         <div class="col-xl">
             <div class="card mb-12">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Tour Location Arrangement</h5>
+                    <h5 class="mb-0">Add New Destination(CQRS)</h5>
                 </div>
                 <div class="card-body">
                     <form method="post">
-                        <div class="mb-3">
-                            <div class="input-group input-group-merge">
-                                <input type="hidden" asp-for="DestinationID" class="form-control" placeholder="Please enter city name" />
-                            </div>
-                        </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-icon-default-fullname">City Name</label>
                             <div class="input-group input-group-merge">
                                 <span class="input-group-text">
                                     <i class="bx bx-building-house"></i>
                                 </span>
-                                <input type="text" asp-for="City" class="form-control" placeholder="Please enter city name" />
+                                <input type="text" asp-for="CityName" class="form-control" placeholder="Please enter city name" />
                             </div>
                         </div>
                         <div class="mb-3">
@@ -45,7 +40,7 @@
                                 <input type="number" asp-for="Price" class="form-control" placeholder="Price" />
                             </div>
                         </div>
-                      
+                       
                         <div class="mb-3">
                             <label class="form-label" for="basic-icon-default-company">Capacity</label>
                             <div class="input-group input-group-merge">
@@ -55,8 +50,8 @@
                                 <input type="text" asp-for="Capacity" class="form-control" placeholder="Capacity" />
                             </div>
                         </div>
-                       
-                        <button class="btn btn-outline-primary">Update Location Information</button>
+                   
+                        <button class="btn btn-outline-primary">Create</button>
 
                     </form>
                 </div>
