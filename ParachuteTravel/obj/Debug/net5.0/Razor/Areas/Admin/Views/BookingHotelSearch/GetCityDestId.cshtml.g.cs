@@ -56,13 +56,27 @@ using ParachuteTravel.CQRS.Commands.DestinationCommands;
 #nullable disable
 #nullable restore
 #line 8 "C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\Areas\Admin\Views\_ViewImports.cshtml"
+using ParachuteTravel.CQRS.Commands.GuideCommands;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 9 "C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\Areas\Admin\Views\_ViewImports.cshtml"
+using ParachuteTravel.CQRS.Results.GuideResults;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\Ruveyda\source\ParachuteTravel_WebApp\ParachuteTravel\Areas\Admin\Views\_ViewImports.cshtml"
 using ParachuteTravel;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"912423b8ed1e43e13a8cb3c03a8d87706f27af54", @"/Areas/Admin/Views/BookingHotelSearch/GetCityDestId.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"22faac07af0a76d76fa84614ac41b2f759b384de", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ce40cfed116b43da6b081e5159eca1ff195e274b", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_BookingHotelSearch_GetCityDestId : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "post", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -102,7 +116,7 @@ using ParachuteTravel;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<h2>Getting a city ID for Booking Hotels</h2>\r\n\r\n<br />\r\n<br />\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "912423b8ed1e43e13a8cb3c03a8d87706f27af545298", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "912423b8ed1e43e13a8cb3c03a8d87706f27af545763", async() => {
                 WriteLiteral("\r\n    <label>Please, enter city name</label>\r\n    <input type=\"text\" class=\"form-control\" name=\"city\" />\r\n    <br />\r\n    <br />\r\n    <button class=\"btn btn-outline-primary\">Get City Id</button>\r\n");
             }
             );

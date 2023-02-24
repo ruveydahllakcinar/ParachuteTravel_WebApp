@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "t0sQn5xFiDyFcFFb2TPk40CPO4G3KCvOZ8wp4kqEEPxmerFQ2ReLtDXAzt+oyhH7HihTU95dm3Y5SoIp1xV2/A==",
+  "dgSpecHash": "RjD5+WzsAC+M2cFze1hrS+7fiWLvlqm2yvrzrnWDcS8qz0az0gi7xpOJQhFVgAf+oX9BcRlJj2wjTJm5Ob975Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ruveyda\\source\\ParachuteTravel_WebApp\\ParachuteTravel\\ParachuteTravel.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,9 @@
     "C:\\Users\\Ruveyda\\.nuget\\packages\\irony.netcore\\1.0.11\\irony.netcore.1.0.11.nupkg.sha512",
     "C:\\Users\\Ruveyda\\.nuget\\packages\\itextsharp.lgplv2.core\\3.3.2\\itextsharp.lgplv2.core.3.3.2.nupkg.sha512",
     "C:\\Users\\Ruveyda\\.nuget\\packages\\mailkit\\3.5.0\\mailkit.3.5.0.nupkg.sha512",
+    "C:\\Users\\Ruveyda\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\Ruveyda\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\Ruveyda\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Ruveyda\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Ruveyda\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Ruveyda\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
