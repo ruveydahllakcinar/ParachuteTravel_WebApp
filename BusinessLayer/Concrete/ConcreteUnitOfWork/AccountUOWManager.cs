@@ -13,25 +13,37 @@ namespace BusinessLayer.Concrete.ConcreteUnitOfWork
     public class AccountUOWManager : IAccountUOWService
     {
         private readonly IAccountDal _accountDal;
-        private readonly IUnitOfWorkDal _unitOfWorkDal;
+        private readonly IUnitOfWorkDal _uowDal;
 
-        public void Add(Account t)
+        public AccountUOWManager(IAccountDal accountDal, IUnitOfWorkDal uowDal)
         {
-            _accountDal.Add(t);
-            _unitOfWorkDal.Save();
+            _accountDal = accountDal;
+            _uowDal = uowDal;
         }
 
-
-        public void MultiUpdate(List<Account> t)
+        public Account TGetById(int id)
         {
-            _accountDal.MultiUpdate(t);
-            _unitOfWorkDal.Save();
+            return _accountDal.TGetById(id);
         }
 
-        public void Update(Account t)
+        public void TInsert(Account t)
         {
-            _accountDal.Update(t);
-            _unitOfWorkDal.Save();
+            _accountDal.TInsert(t);
+            _uowDal.Save();
         }
+
+        public void TMultiUpdate(List<Account> t)
+        {
+            _accountDal.TMultiUpdate(t);
+            _uowDal.Save();
+        }
+
+        public void TUpdate(Account t)
+        {
+            _accountDal.TUpdate(t);
+            _uowDal.Save();
+        }
+
+        
     }
 }

@@ -8,9 +8,9 @@ namespace DataAccessLayer.Abstract
 {
    public interface IGenericUnitOfWorkDal<T> where T : class
     {
-     
-        void Add(T t);
-        void Update(T t);
-        void MultiUpdate(List<T> t);
+        void TInsert(T t);
+        void TUpdate(T t);
+        void TMultiUpdate(List<T> t);
+        T TGetById(int id);
     }
 }

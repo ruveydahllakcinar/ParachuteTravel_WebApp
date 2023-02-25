@@ -16,19 +16,22 @@ namespace DataAccessLayer.Repository
         {
             _context = context;
         }
-
-        public void Insert(T t)
+        public T TGetById(int id)
         {
-            _context.Add(t);
-
+            return _context.Set<T>().Find(id);
         }
 
-        public void MultiUpdate(List<T> t)
+        public void TInsert(T t)
+        {
+            _context.Add(t);
+        }
+
+        public void TMultiUpdate(List<T> t)
         {
             _context.UpdateRange(t);
         }
 
-        public void Update(T t)
+        public void TUpdate(T t)
         {
             _context.Update(t);
         }
