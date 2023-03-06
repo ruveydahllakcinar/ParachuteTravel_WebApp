@@ -26,7 +26,7 @@ namespace ParachuteTravel.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(AccountViewModel model)
+        public IActionResult Index(AccountViewModelDto model)
         {
             var sender = _accountUOWService.TGetById(model.SenderId);
             var receiver = _accountUOWService.TGetById(model.ReceiverId);

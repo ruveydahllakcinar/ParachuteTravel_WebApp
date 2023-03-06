@@ -24,7 +24,7 @@ namespace ParachuteTravel.CQRS.Handlers.GuideHandlers
             _context.Guides.Add(new Guide
             {
                 Name = request.Name,
-                Description =request.Description,
+                Description = request.Description,
                 Status = true
             });
             await _context.SaveChangesAsync();

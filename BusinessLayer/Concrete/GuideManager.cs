@@ -42,8 +42,8 @@ namespace BusinessLayer.Concrete
 
         public Guide TGetById(int id)
         {
-          return  _guideDal.GetById(id);
-                
+            return _guideDal.GetById(id);
+
         }
 
         public List<Guide> TGetList()

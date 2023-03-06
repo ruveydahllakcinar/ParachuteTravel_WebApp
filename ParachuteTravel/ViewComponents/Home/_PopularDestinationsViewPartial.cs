@@ -13,7 +13,7 @@ namespace PoleStar_TraversalCoreProject.ViewComponents.Home
         DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());
         public IViewComponentResult Invoke()
         {
-            var destination = destinationManager.TGetList();
+            var destination = destinationManager.TGetList().OrderByDescending(x=>x.DestinationId).Take(6).ToList();
             return View(destination);
         }
     }

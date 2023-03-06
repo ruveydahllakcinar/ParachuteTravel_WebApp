@@ -13,7 +13,7 @@ namespace PoleStar_TraversalCoreProject.ViewComponents.Home
         FeatureLargeCardManager featureLargeCardManager = new FeatureLargeCardManager(new EfFeatureLargeCardDal());
         public IViewComponentResult Invoke()
         {
-            var values = featureLargeCardManager.TGetList();
+            var values = featureLargeCardManager.TGetList().OrderByDescending(x=>x.FeatureLargeCardId).Take(5).ToList();
             return View(values);
         }
     }

@@ -32,10 +32,12 @@ namespace BusinessLayer.Concrete
         {
             return _commentDal.GetById(id);
         }
+
         public List<Comment>TGetDestinationById(int id)
         {
             return _commentDal.GetListByFilter(x => x.DestinationId == id);
         }
+
         public List<Comment> TGetList()
         {
             return _commentDal.GetList();
@@ -44,6 +46,11 @@ namespace BusinessLayer.Concrete
         public List<Comment> TGetListCommentWithDestination()
         {
             return _commentDal.GetListCommentWithDestination();
+        }
+
+        public List<Comment> TGetListCommentWithDestinationAndUser(int id)
+        {
+            return _commentDal.GetListCommentWithDestinationAndUser(id);
         }
 
         public void TUpdate(Comment t)

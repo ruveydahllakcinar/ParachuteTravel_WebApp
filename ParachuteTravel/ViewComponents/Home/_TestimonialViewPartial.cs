@@ -13,7 +13,7 @@ namespace PoleStar_TraversalCoreProject.ViewComponents.Home
         public IViewComponentResult Invoke()
         {
             TestimonialManager testimonialManager = new TestimonialManager(new EfTestimonialDal());
-            var testimonial = testimonialManager.TGetList();
+            var testimonial = testimonialManager.TGetList().OrderByDescending(x => x.TestimonialId).Take(6).ToList();
             return View(testimonial);
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTOLayer.DTOs.AccountDTOs
 {
-   public class AccountViewModel
+   public class AccountViewModelDto
     {
         public int SenderId { get; set; }
         public int ReceiverId { get; set; }

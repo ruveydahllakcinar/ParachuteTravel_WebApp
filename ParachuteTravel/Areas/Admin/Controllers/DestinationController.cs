@@ -27,6 +27,7 @@ namespace ParachuteTravel.Areas.Admin.Controllers
             var values = _destinationService.TGetList();
             return View(values);
         }
+
         [HttpGet]
         public IActionResult AddDestination()
         {

@@ -13,7 +13,7 @@ namespace ParachuteTravel.Areas.Admin.Models
         public string Description { get; set; }
         public string GuideImageUrl { get; set; }
         public IFormFile Image { get; set; }
-        public string TwitterUrl { get; set; }
+        public string LinkedinUrl { get; set; }
         public string InstagramUrl { get; set; }
         public bool Status { get; set; }
 

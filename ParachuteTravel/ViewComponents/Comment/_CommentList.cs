@@ -13,8 +13,11 @@ namespace PoleStar_TraversalCoreProject.ViewComponents.Comment
         CommentManager commentManager = new CommentManager(new EfCommentDal());
         public IViewComponentResult Invoke(int id)
         {
-            var comment = commentManager.TGetDestinationById(id);
+            ViewBag.v = commentManager.TGetListCommentWithDestinationAndUser(id).Count();
+            var comment = commentManager.TGetListCommentWithDestinationAndUser(id);
             return View(comment);
+
+           
         }
     }
 }

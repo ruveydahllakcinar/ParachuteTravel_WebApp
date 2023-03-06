@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

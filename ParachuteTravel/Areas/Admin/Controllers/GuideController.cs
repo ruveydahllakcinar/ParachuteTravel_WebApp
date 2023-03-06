@@ -24,7 +24,7 @@ namespace ParachuteTravel.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-           
+
             var guides = _guideService.TGetList();
             return View(guides);
         }
@@ -37,7 +37,7 @@ namespace ParachuteTravel.Areas.Admin.Controllers
         }
         [HttpPost]
         public IActionResult AddGuide(AddGuideViewModel addGuide)
-        { 
+        {
             Guide guide = new Guide();
             GuideValidator validationRules = new();
             var validatorResult = validationRules.Validate(guide);
@@ -59,18 +59,18 @@ namespace ParachuteTravel.Areas.Admin.Controllers
                 guide.Description = addGuide.Description;
                 guide.Status = addGuide.Status;
                 guide.InstagramUrl = addGuide.InstagramUrl;
-                guide.TwitterUrl = addGuide.TwitterUrl;
-         
+                guide.LinkedinUrl = addGuide.LinkedinUrl;
+
                 _guideService.TAdd(guide);
                 return RedirectToAction("Index", "Guide", new { area = "Admin" });
-            }   
+            }
             else
             {
                 foreach (var item in validatorResult.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
-                
+
             }
             return View();
 
@@ -100,7 +100,7 @@ namespace ParachuteTravel.Areas.Admin.Controllers
             guide.Description = addGuide.Description;
             guide.Status = addGuide.Status;
             guide.InstagramUrl = addGuide.InstagramUrl;
-            guide.TwitterUrl = addGuide.TwitterUrl;
+            guide.LinkedinUrl = addGuide.LinkedinUrl;
             _guideService.TUpdate(guide);
             return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
@@ -108,7 +108,7 @@ namespace ParachuteTravel.Areas.Admin.Controllers
         public IActionResult ChangeToTrue(int id)
         {
             _guideService.TChangeToTrueByGuide(id);
-            return RedirectToAction("Index","Guide", new { area = "Admin" });
+            return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
 
 
