@@ -13,7 +13,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("workstation id=ParachuteTravelDb.mssql.somee.com;packet size=4096;user id=akcinarruv_SQLLogin_1;pwd=412n689l94;data source=ParachuteTravelDb.mssql.somee.com;persist security info=False;initial catalog=ParachuteTravelDb");
+            optionsBuilder.UseSqlServer();
         }
 
         public DbSet<About> Abouts { get; set; }
